@@ -1,0 +1,35 @@
+.features {
+  display: flex;
+}
+
+.features .features__item + .features__item,
+.our-works .our-works__item + .our-works__item,
+.our-team .our-team__item + .our-team__item {
+  margin-left: 30px;
+}
+
+.feature-card {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  background-color: #f5f4fa;
+}
+
+.feature-card__title {
+  color: var(--primary-text-color);
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.feature-card__description {
+  color: var(--seconadary-text-color);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
