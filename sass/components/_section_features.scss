@@ -1,15 +1,23 @@
 .features {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
-.features .features__item + .features__item,
-.our-works .our-works__item + .our-works__item,
-.our-team .our-team__item + .our-team__item {
-  margin-left: 30px;
+// .features .features__item + .features__item,
+// .our-works .our-works__item + .our-works__item,
+// .our-team .our-team__item + .our-team__item {
+//   margin-left: 30px;
+// }
+
+.features__item {
+  margin-bottom: 30px;
 }
 
 .feature-card {
-  width: 270px;
+  // width: 270px;
   height: 120px;
   display: flex;
   justify-content: center;
@@ -25,6 +33,7 @@
   line-height: 1.14;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .feature-card__description {

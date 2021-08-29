@@ -1,9 +1,21 @@
 .section-team {
   background-color: #f5f4fa;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .our-team {
-  display: flex;
+  @media screen and(min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: -5px;
+  }
+  @media screen and(min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .our-team__item {
@@ -11,6 +23,17 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100%-2 * 10px) \2);
+    margin: 5px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .member-card {
@@ -34,7 +57,7 @@
 
 .member-card__social-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 32px;
   margin-top: 16px;
 }
@@ -42,6 +65,9 @@
 .member-card__social-link {
   width: 44px;
   height: 44px;
+}
+.member-card__social-link:not(:last-child) {
+  margin-right: 10px;
 }
 
 .member-card__social-link-icon {
