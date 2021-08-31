@@ -1225,10 +1225,25 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 60px;
 }
 
-.filter .filter__btn + .filter__btn {
-  margin-left: 8px;
+@media screen and (max-width: 767px) {
+  .filter {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.filter__btn {
+  margin-bottom: 15px;
+}
+
+.filter__btn:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filter__button {
@@ -1267,17 +1282,43 @@ ul {
           justify-content: center;
 }
 
-.example-card {
-  margin-right: 30px;
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .examples-list {
+    margin: -14px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
-.example-card:nth-child(3n) {
-  margin-right: 0px;
+.example-card:not(:last-child) {
+  margin-bottom: 50px;
 }
 
-.example-card:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .example-card {
+    width: calc((100%-2 * 14px) \2);
+    margin: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .example-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .example-card {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .example-card:nth-child(3n) {
+    margin-right: 0px;
+  }
+  .example-card:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
+  }
 }
 
 .example-card__link {
