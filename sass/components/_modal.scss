@@ -6,12 +6,22 @@
 
   // min-width: 528px;
   // min-height: 581px;
-  max-width: 450px;
+  // max-width: 450px;
+  min-width: 95vw;
   max-height: 609px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and(min-width: 768px) and (max-width: 1199px) {
+    min-width: 450px;
+    min-height: 609px;
+  }
+  @media screen and(min-width: 1199px) {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal__close {
@@ -45,6 +55,7 @@
 
 .form {
   position: relative;
+
   // width: 528px;
   // height: 581px;
   // max-width: 450px;
@@ -75,7 +86,7 @@
 }
 
 .form__label {
-  display: inline-block;
+  display: block;
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
@@ -124,7 +135,7 @@
 }
 
 .form__comment-label {
-  display: inline-block;
+  display: block;
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
@@ -162,7 +173,7 @@
   line-height: 1.17;
   // line-height: 24px;
   color: #757575;
-  display: inline-block;
+  display: block;
   margin-bottom: 30px;
 }
 
