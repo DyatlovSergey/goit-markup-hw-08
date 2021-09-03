@@ -360,10 +360,6 @@ img {
   font-family: inherit;
 }
 
-.features {
-  width: 100%;
-}
-
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .features {
     display: -webkit-box;
@@ -371,12 +367,7 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin: -15px;
   }
 }
 
@@ -388,13 +379,11 @@ img {
   }
 }
 
-.features__item {
-  width: 100%;
-}
-
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .features__item {
-    width: 50%;
+    margin: 15px;
+    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+        flex-basis: calc((100% - 2 * 30px) / 2);
   }
 }
 
@@ -557,6 +546,8 @@ img {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .our-team__item {
+    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+        flex-basis: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
 }
@@ -644,18 +635,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-@media screen and (min-width: 0px) and (max-width: 767px) {
-  .clients {
-    margin: -15px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .clients {
-    margin: -15px;
-  }
+  margin: -15px;
 }
 
 .clients__card {
@@ -672,12 +652,16 @@ img {
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
   .clients__card {
+    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+        flex-basis: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .clients__card {
+    -ms-flex-preferred-size: calc((100% - 3 * 30px) / 3);
+        flex-basis: calc((100% - 3 * 30px) / 3);
     margin: 15px;
   }
 }
@@ -693,6 +677,7 @@ img {
 }
 
 .clients__logo {
+  width: 100%;
   fill: #afb1b8;
   padding: 16px 32px;
   border: 1px solid #afb1b8;
@@ -706,6 +691,10 @@ img {
 .clients__logo:hover, .clients__logo:focus {
   fill: var(--blue-text);
   border: 1px solid var(--blue-text);
+}
+
+.clients__logo svg {
+  width: 100%;
 }
 
 .footer {
@@ -1375,7 +1364,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1399,8 +1387,8 @@ img {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .example-card {
-    width: 354px;
-    height: 440px;
+    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+        flex-basis: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
 }
