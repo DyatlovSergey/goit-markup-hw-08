@@ -1058,7 +1058,7 @@ img {
 }
 
 .modal {
-  width: 450px;
+  min-width: 320px;
   height: 609px;
   margin-right: auto;
   margin-left: auto;
